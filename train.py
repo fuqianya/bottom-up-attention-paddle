@@ -2,7 +2,7 @@
 train.py
 ~~~~~~~~
 
-A script to train the captioner with dataloader implement from scratc.
+A script to train the captioner.
 """
 import os
 import json

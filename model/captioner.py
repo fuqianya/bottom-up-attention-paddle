@@ -244,34 +244,45 @@ class Captioner(nn.Layer):
         fc_feats, att_feats, pre_att_feats = self._prepare_features(fc_feats, att_feats)
         state = self._init_hidden(batch_size)
 
-        seq = paddle.zeros((batch_size, max_seq_len), dtype='int64')
-        seq_logprobs = paddle.zeros([batch_size, max_seq_len])
-        seq_masks = paddle.zeros([batch_size, max_seq_len])
         it = paddle.zeros([batch_size, ], dtype='int64').fill(self.sos_id)  # start token
-        unfinished = it == self.sos_id
+        seq = []
+        seq_logprobs = []
+        seq_masks = []
+
+        unfinished = (it == self.sos_id).cast('float32')
 
         for t in range(max_seq_len):
-            _, logprobs, state = self._forward_step(it, fc_feats, att_feats, p_att_feats, state)
+            _, logprobs, state = self._forward_step(it, fc_feats, att_feats, pre_att_feats, state)
+
             if sample_max:
                 sample_logprobs = paddle.max(logprobs, 1)
                 it = paddle.argmax(logprobs, 1)
+                it = it.reshape((-1,)).cast('int64')
             else:
                 prob_prev = paddle.exp(logprobs)
                 it = paddle.multinomial(prob_prev, 1)
+                it = it.reshape((-1,)).cast('int64')
+                # prepare data for paddle.gather_nd
+                batch_size = it.shape[0]
+                gather_index = paddle.zeros((batch_size, 2), dtype='int64')  # [batch_size, 2]
+                gather_index[:, 0] = paddle.arange(batch_size)
+                gather_index[:, 1] = it
                 # gather the logprobs at sampled positions
-                sample_logprobs = paddle.gather(logprobs, it, 1)
+                sample_logprobs = paddle.gather_nd(logprobs, gather_index)
 
-            it = it.reshape((-1, )).long()
-            sample_logprobs = sample_logprobs.reshape((-1, ))
+            it = it * unfinished.cast(it.dtype)
+            seq.append(it)
+            seq_logprobs.append(sample_logprobs.reshape((-1, )))
+            seq_masks.append(unfinished.cast('float32'))
 
-            seq_masks[:, t] = unfinished
-            it = it * unfinished.type_as(it)
-            seq[:, t] = it
-            seq_logprobs[:, t] = sample_logprobs
-
-            unfinished = unfinished * (it != self.eos_id)
+            unfinished = unfinished.cast('float32') * (it != self.eos_id).cast('float32')
             if unfinished.sum() == 0:
                 break
+
+        # we concat the output when finish all time steps
+        seq = paddle.stack(seq, axis=1).cast('int64')
+        seq_logprobs = paddle.stack(seq_logprobs, axis=1)
+        seq_masks = paddle.stack(seq_masks, axis=1)
 
         return seq, seq_logprobs, seq_masks
 

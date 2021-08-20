@@ -4,12 +4,13 @@ utils.py
 
 A module contains all utils used in this project.
 """
+import tqdm
+import numpy as np
+
 # CIDERD
 from pyutils.self_critical.cider.pyciderevalcap.ciderD.ciderD import CiderD
 # BLEU
 from pyutils.self_critical.bleu.bleu import Bleu
-
-import tqdm
 
 def clip_gradient(optimizer, grad_clip):
     for group in optimizer.param_groups:
