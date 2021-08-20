@@ -82,7 +82,7 @@ def main(params):
     if train_mode == 'rl':
         assert params['resume'], 'resume needs to provide when training with self-critical'
         print("====> loading checkpoint '{}'".format(params['resume']))
-        checkpoint = paddle.load(params['resume'], map_location=lambda s, l: s)
+        checkpoint = paddle.load(params['resume'])
         assert params['settings'] == checkpoint['settings'], \
             'params[settings] and resume model settings are different'
         assert idx2word == checkpoint['idx2word'], \

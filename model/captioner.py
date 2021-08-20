@@ -244,7 +244,7 @@ class Captioner(nn.Layer):
         fc_feats, att_feats, pre_att_feats = self._prepare_features(fc_feats, att_feats)
         state = self._init_hidden(batch_size)
 
-        it = paddle.zeros([batch_size, ], dtype='int64').fill(self.sos_id)  # start token
+        it = paddle.fluid.layers.fill_constant(shape=[batch_size, ], dtype='int64', value=self.sos_id) # start token
         seq = []
         seq_logprobs = []
         seq_masks = []
