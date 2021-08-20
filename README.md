@@ -26,7 +26,7 @@
 
 ## 三、数据集
 
-本项目所使用的数据集为[COCO2014](https://cocodataset.org/)。该数据集共包含123287张图像，每张图像对应5个标题。训练集、验证集和测试集分别为113287、5000、5000张图像及其对应的标题。本项目使用作者提供的预提取的`bottom-up`特征，可以从[这里](https://github.com/peteanderson80/bottom-up-attention)下载得到（我们提供了脚本下载该数据集的标题以及图像特征，见[download_dataset.sh](https://github.com/fuqianya/bottom-up-attention-paddle/download_dataset.sh)）。
+本项目所使用的数据集为[COCO2014](https://cocodataset.org/)。该数据集共包含123287张图像，每张图像对应5个标题。训练集、验证集和测试集分别为113287、5000、5000张图像及其对应的标题。本项目使用作者提供的预提取的`bottom-up`特征，可以从[这里](https://github.com/peteanderson80/bottom-up-attention)下载得到（我们提供了脚本下载该数据集的标题以及图像特征，见[download_dataset.sh](https://github.com/fuqianya/bottom-up-attention-paddle/blob/main/download_dataset.sh)）。
 
 ## 四、环境依赖
 
