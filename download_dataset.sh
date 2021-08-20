@@ -18,3 +18,4 @@ echo "Unzipping the features"
 unzip ./data/trainval_36.zip -d ./data
 
 rm -f ./data/trainval_36.zip
+rm -rf ./data/trainval_36
