@@ -67,6 +67,8 @@ while True:
         dataloader.resetImageIerator(split='test')
         break
 
+if not os.path.isdir(os.path.join(opt.result, opt.train_mode)):
+    os.makedirs(os.path.join(opt.result, opt.train_mode))
 json.dump(results, open(os.path.join(opt.result, opt.train_mode, opt.result_file), 'w'))
 
 # evaluate the generated captions with bleu scores
