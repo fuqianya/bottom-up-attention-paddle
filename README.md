@@ -22,7 +22,7 @@
 
 | 指标 | 原论文 | 复现精度 | 
 | :---: | :---: | :---: | 
-| BlEU-1 | 0.798 | 0.796 |
+| BlEU-1 | 0.798 | 0.791 |
 
 ## 三、数据集
 
@@ -89,7 +89,7 @@ python eval.py --train_mode rl --eval_model ./checkpoint/rl/epoch_25.pth --resul
 
 ### 使用预训练模型进行预测
 
-模型下载: [谷歌云盘](https://drive.google.com/)
+模型下载: [谷歌云盘](https://drive.google.com/drive/folders/1_ShwBUsUir33VHXtLSypn44Ah-Ke5jyZ?usp=sharing)
 
 将下载的模型权重放到`checkpoints`目录下, 运行`step6`的指令进行测试。
 
@@ -130,4 +130,4 @@ python eval.py --train_mode rl --eval_model ./checkpoint/rl/epoch_25.pth --resul
 | 框架版本 | Paddle 2.1.0 |
 | 应用场景 | 多模态 |
 | 支持硬件 | GPU、CPU |
-| 下载链接 | [预训练模型]() \| [训练日志]()  |
+| 下载链接 | [预训练模型](https://drive.google.com/drive/folders/1_ShwBUsUir33VHXtLSypn44Ah-Ke5jyZ?usp=sharing) \| [训练日志](https://drive.google.com/drive/folders/1_ShwBUsUir33VHXtLSypn44Ah-Ke5jyZ?usp=sharing)  |
