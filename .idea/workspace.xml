@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bc93d2b7-22ca-4a54-8f72-92cc03504dee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/train.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/model/captioner.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/config/config.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1wy2RLqadlc9wHkJZXFRnxYSpM4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bc93d2b7-22ca-4a54-8f72-92cc03504dee" name="Default Changelist" comment="" />
+      <created>1629416498886</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629416498886</updated>
+      <workItem from="1629416503983" duration="240000" />
+      <workItem from="1629416787747" duration="1178000" />
+      <workItem from="1629437853271" duration="1934000" />
+      <workItem from="1629445630506" duration="5000" />
+      <workItem from="1629549365992" duration="6000" />
+      <workItem from="1629594962733" duration="611000" />
+      <workItem from="1629605732534" duration="28000" />
+      <workItem from="1629612054549" duration="20000" />
+      <workItem from="1629623867535" duration="23000" />
+      <workItem from="1629627463496" duration="41000" />
+      <workItem from="1629665320043" duration="202000" />
+      <workItem from="1629678064211" duration="877000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1635" y="180" width="800" height="673" key="#Inspections" timestamp="1629416560385">
+      <screen x="1080" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1635" y="180" width="800" height="673" key="#Inspections/1080.0.1920.1080/0.27.1080.1893@1080.0.1920.1080" timestamp="1629416560385" />
+    <state x="1721" y="323" width="627" height="386" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629665467319">
+      <screen x="1080" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1721" y="323" width="627" height="386" key="#com.intellij.fileTypes.FileTypeChooser/1080.0.1920.1080/0.27.1080.1893@1080.0.1920.1080" timestamp="1629665467319" />
+    <state x="1806" y="327" width="424" height="480" key="FileChooserDialogImpl" timestamp="1629678532756">
+      <screen x="1080" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1806" y="327" width="424" height="480" key="FileChooserDialogImpl/1080.0.1920.1080/0.27.1080.1893@1080.0.1920.1080" timestamp="1629678532756" />
+    <state x="1529" y="153" key="SettingsEditor" timestamp="1629416517171">
+      <screen x="1080" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1529" y="153" key="SettingsEditor/1080.0.1920.1080/0.27.1080.1893@1080.0.1920.1080" timestamp="1629416517171" />
+  </component>
+</project>
